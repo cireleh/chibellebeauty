@@ -1,0 +1,81 @@
+# README.md (Frontend)
+
+## ChiBelle Frontend
+This is the client-facing web interface for ChiBelle, a beauty and wellness appointment platform built for the Lagos market.
+
+### 🚀 Tech Stack
+- React 18
+- Next.js 13
+- Tailwind CSS
+
+### 📁 Structure
+- `/pages` – Main routes (home, login, etc.)
+- `/components` – UI components (e.g., ServiceCard)
+
+### 🔧 Setup
+```bash
+npm install
+npm run dev
+```
+
+### 🌐 Environment Variables
+Create a `.env.local` file using:
+```
+NEXT_PUBLIC_API_URL=https://your-api-url
+```
+
+---
+
+# README.md (Backend)
+
+## ChiBelle Backend
+Django-based REST API backend for ChiBelle. Includes JWT auth, booking system, and user model.
+
+### 🚀 Tech Stack
+- Django 4.2+
+- Django REST Framework
+- PostgreSQL
+
+### 📁 Structure
+- `core/` – Django settings and URLs
+- `accounts/` – Custom User model
+- `bookings/` – Booking logic
+
+### 🔧 Setup
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py loaddata fixtures/test_users.json
+python manage.py runserver
+```
+
+### 🌐 Environment Variables
+Create a `.env` file using:
+```
+SECRET_KEY=your-django-secret-key
+DB_NAME=chibelle
+DB_USER=chibelleuser
+DB_PASSWORD=password
+DB_HOST=localhost
+DB_PORT=5432
+```
+
+---
+
+# fixtures/test_users.json
+
+```json
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "email": "admin@chibelle.com",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "password": "pbkdf2_sha256$260000$demo$9aV2FvM0uOzFUZK9NRhRujq0cz5K9guEFzWz5V5EzKs="
+    }
+  }
+]
