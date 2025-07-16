@@ -1,7 +1,3 @@
 {
-  "projects": {
-    "chibelle-frontend": {
-      "rootDirectory": "frontend"
-    }
-  }
+  "root": "frontend"
 }
